@@ -13,6 +13,9 @@ export async function addTodo(title) {
   try {
     const response = await fetch("https://todos.drewh.net/api/todos", {
       method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify({ title: title }),
     });
     if (response.ok) {
