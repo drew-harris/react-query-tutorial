@@ -5,7 +5,7 @@ import "./App.css";
 function App() {
   useEffect(() => {
     async function fetchData() {
-      const todos = await addTodo("TEST");
+      const todos = await getTodos();
       console.log(todos);
     }
 
